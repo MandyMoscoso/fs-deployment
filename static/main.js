@@ -15,7 +15,7 @@ const getCompliment = () => {
 };
 
 const getFortune = () => {
-    axios.get("https://mm-labs-deployment.herokuapp.com//api/fortune/")
+    axios.get("https://mm-labs-deployment.herokuapp.com/api/fortune/")
         .then(res => {
             const data = res.data;
             alert(data);
