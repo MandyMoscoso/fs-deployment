@@ -7,7 +7,7 @@ let idStarter=4;
 const getAllQuotesBtn = document.getElementById("all-quotes");
 
 const getCompliment = () => {
-    axios.get("http://localhost:4000/api/compliment/")
+    axios.get("https://mm-labs-deployment.herokuapp.com/api/compliment/")
         .then(res => {
             const data = res.data;
             alert(data);
@@ -15,7 +15,7 @@ const getCompliment = () => {
 };
 
 const getFortune = () => {
-    axios.get("http://localhost:4000/api/fortune/")
+    axios.get("https://mm-labs-deployment.herokuapp.com//api/fortune/")
         .then(res => {
             const data = res.data;
             alert(data);
@@ -23,7 +23,7 @@ const getFortune = () => {
 };
 
 const getInspiration = () => {
-    axios.get("http://localhost:4000/api/quotes/")
+    axios.get("https://mm-labs-deployment.herokuapp.com/api/quotes/")
         .then(res => {
             const data = res.data;
             // console.log(data.quote)
@@ -43,7 +43,7 @@ const registerQuote=(event) => {
     idStarter++
     // console.log(quoteObj);
     registerInput.value="";
-    axios.post("http://localhost:4000/api/register",quoteObj)
+    axios.post("https://mm-labs-deployment.herokuapp.com/api/register",quoteObj)
         .then(res=> {
             document.querySelector(".register-result").textContent=""
             document.querySelector(".quote-here").textContent="";
@@ -59,7 +59,7 @@ const getAllQuotes = () => {
 
     document.querySelector(".quote-here").textContent="";
 
-    axios.get("http://localhost:4000/api/register/")
+    axios.get("https://mm-labs-deployment.herokuapp.com/api/register/")
         .then(res => {
             // console.log("hello")
             for ( let i of res.data){
@@ -81,7 +81,7 @@ const createQuoteDisplay = (quote, id) =>{
 const deleteQuote = id =>{
     console.log("delete clicked. main.js")
     
-    axios.delete(`http://localhost:4000/api/quotes/${id}`). then (res => getAllQuotes())
+    axios.delete(`https://mm-labs-deployment.herokuapp.com/api/quotes/${id}`). then (res => getAllQuotes())
 
 }
 
@@ -105,7 +105,7 @@ const getEditForm=(id) => {
         id,
         quote: formInput
     }
-    axios.put(`http://localhost:4000/api/quotes/${id}`,formObj). then(res => getAllQuotes())
+    axios.put(`https://mm-labs-deployment.herokuapp.com/api/quotes/${id}`,formObj). then(res => getAllQuotes())
         
 };
 
