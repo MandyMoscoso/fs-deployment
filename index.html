@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1> Hi this is my landing page</h1>
-</body>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+  </head>
+  <body class="container">
+    <button id="complimentButton">Get a compliment</button>
+    <button id="fortuneButton">Get a fortune</button>
+    <button id="random-inspiration">Get Inspired</button>
+
+    <form id="register-form">
+      <h1>Add An Inspiration</h1>
+      <div class="register-result"></div>
+      <input 
+          type='text'
+          id="register-quote"
+          placeholder="Inspiration"/>
+      
+      <button>Add</button>
+    </form>
+    
+
+
+    <button id="all-quotes">Get all Inspirations</button>
+    <div class ="quote-here"></div>
+
+
+  
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+
+    
+  </body>
 </html>
