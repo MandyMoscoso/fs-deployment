@@ -6,6 +6,8 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
+app.use("/scripts", express.static(__dirname + '/scripts'));
+
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../index.html'));
 });
